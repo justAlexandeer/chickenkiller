@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.myprog.chickenkiller.API.JsonPlaceHolderApi;
 import com.myprog.chickenkiller.models.Post;
+import com.myprog.chickenkiller.models.Result;
 import com.myprog.chickenkiller.models.User;
 
 import org.json.JSONArray;
@@ -41,26 +42,27 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
-        Call<Post> call = jsonPlaceHolderApi.getPosts();
+        Call<Result> call = jsonPlaceHolderApi.getPosts();
 
 
-        call.enqueue(new Callback<Post>() {
+        call.enqueue(new Callback<Result>() {
             @Override
-            public void onResponse(Call<Post> call, Response<Post> response) {
+            public void onResponse(Call<Result> call, Response<Result> response) {
                 if(!response.isSuccessful()){
                     return;
                 }
-                List<User> users = response.body().getResult();
-                for(User user: users){
+                List<Post> posts = response.body().getPost();
+                for(Post post: posts){
                     String content = "";
-                    content+= user.getFirstName() + "\n";
-                    content+= user.getSecondName() + "\n";
+                    content+= "\n\n\n";
+                    content+= post.getIdOfNew() + "\n";
+                    content+= post.getTextOfNew() + "\n";
 
                     mainText.append(content);
                 }
             }
             @Override
-            public void onFailure(Call<Post> call, Throwable t) {
+            public void onFailure(Call<Result> call, Throwable t) {
                 mainText.setText(t.getMessage());
             }
         });
