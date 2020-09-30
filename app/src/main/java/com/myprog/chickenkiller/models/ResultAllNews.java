@@ -3,7 +3,7 @@ package com.myprog.chickenkiller.models;
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-public class Result {
+public class ResultAllNews {
 
     @SerializedName("ok")
     public Boolean ok;

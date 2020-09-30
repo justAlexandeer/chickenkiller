@@ -12,19 +12,19 @@ public class Comment {
     @SerializedName("text_of_comment")
     public String textOfComment;
 
-    public void setUserIdComment(Integer userIdComment) {
-        this.userIdComment = userIdComment;
+    public Integer getUserIdComment() {
+        return userIdComment;
     }
 
-    public void setIdOfComment(Integer idOfComment) {
-        this.idOfComment = idOfComment;
+    public Integer getIdOfComment() {
+        return idOfComment;
     }
 
-    public void setIdOfNewComment(Integer idOfNewComment) {
-        this.idOfNewComment = idOfNewComment;
+    public Integer getIdOfNewComment() {
+        return idOfNewComment;
     }
 
-    public void setTextOfComment(String textOfComment) {
-        this.textOfComment = textOfComment;
+    public String getTextOfComment() {
+        return textOfComment;
     }
 }

@@ -13,4 +13,15 @@ public class AutorId {
     @SerializedName("description")
     public String description;
 
+    public UserIdAutors getUserIdAutors() {
+        return userIdAutors;
+    }
+
+    public List<Integer> getNewsId() {
+        return newsId;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }

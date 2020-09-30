@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.myprog.chickenkiller.API.JsonPlaceHolderApi;
 import com.myprog.chickenkiller.adapters.mainNewsAdapter;
 import com.myprog.chickenkiller.models.Post;
-import com.myprog.chickenkiller.models.Result;
+import com.myprog.chickenkiller.models.ResultAllNews;
 
 import java.util.List;
 
@@ -42,20 +42,16 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
-        Call<Result> call = jsonPlaceHolderApi.getPosts();
+        Call<ResultAllNews> call = jsonPlaceHolderApi.getPosts();
 
-        call.enqueue(new Callback<Result>() {
+        call.enqueue(new Callback<ResultAllNews>() {
             @Override
-            public void onResponse(Call<Result> call, Response<Result> response) {
-                if(!response.isSuccessful()){
-                    return;
-                }
+            public void onResponse(Call<ResultAllNews> call, Response<ResultAllNews> response) {
                 List<Post> posts = response.body().getPost();
-
-                recyclerView.setAdapter(new mainNewsAdapter(posts));
+                recyclerView.setAdapter(new mainNewsAdapter(posts, MainActivity.this));
             }
             @Override
-            public void onFailure(Call<Result> call, Throwable t) {
+            public void onFailure(Call<ResultAllNews> call, Throwable t) {
                 mainText.setText(t.getMessage());
             }
         });
