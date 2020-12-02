@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">chickenkiller</string>
     <string name="baseUrl"></string>
+    <string name="registrationEditTextEmail">Email</string>
+    <string name="registrationEditTextPassword">Password</string>
+    <string name="registrationButtonRegistration">Зарегистрироваться</string>
+    <string name="registrationButtonLogin">Войти</string>
+    <string name="mainActivity_ButtonMyPage">Моя страница</string>
+    <string name="myPageActivity_DateRegistration">Дата регистрации %1$s</string>
+    <string name="activityMyPageInfo_EditTextFirstName">Имя</string>
+    <string name="activityMyPageInfo_EditTextSecondName">Фамилия</string>
+    <string name="activityMyPageInfo_ButtonSave">Сохранить</string>
+    <string name="activityMyPage_ButtonEdit">Редактировать</string>
+    <string name="activityPost_EditTextComment">Комментарий</string>
+    <string name="activityPost_ButtonAddComment">Написать</string>
 </resources>

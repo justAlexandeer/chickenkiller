@@ -1,11 +1,17 @@
 package com.myprog.chickenkiller.models;
 
+import com.myprog.chickenkiller.models.Image;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 public class Post {
 
+    @SerializedName("images")
+    public List<Image> images = null;
+    @SerializedName("photo")
+    public String photo;
     @SerializedName("id_of_new")
     public Integer idOfNew;
     @SerializedName("category")
@@ -22,6 +28,14 @@ public class Post {
     public String textOfNew;
     @SerializedName("tags")
     public List<Tag> tags = null;
+
+    public List<Image> getImages() {
+        return images;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
 
     public Integer getIdOfNew() {
         return idOfNew;

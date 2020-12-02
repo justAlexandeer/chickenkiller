@@ -2,11 +2,11 @@ package com.myprog.chickenkiller.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class User {
+public class UserIdComment {
     @SerializedName("date_of_create_user")
     public String dateOfCreateUser;
     @SerializedName("image")
-    public Object image;
+    public String image;
     @SerializedName("first_name")
     public String firstName;
     @SerializedName("second_name")
@@ -18,7 +18,7 @@ public class User {
         return dateOfCreateUser;
     }
 
-    public Object getImage() {
+    public String getImage() {
         return image;
     }
 
@@ -34,4 +34,3 @@ public class User {
         return userId;
     }
 }
-

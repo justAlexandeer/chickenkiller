@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Comment {
     @SerializedName("user_id_comment")
-    public Integer userIdComment;
+    public UserIdComment userIdComment;
     @SerializedName("id_of_comment")
     public Integer idOfComment;
     @SerializedName("id_of_new_comment")
@@ -12,7 +12,7 @@ public class Comment {
     @SerializedName("text_of_comment")
     public String textOfComment;
 
-    public Integer getUserIdComment() {
+    public UserIdComment getUserIdComment() {
         return userIdComment;
     }
 

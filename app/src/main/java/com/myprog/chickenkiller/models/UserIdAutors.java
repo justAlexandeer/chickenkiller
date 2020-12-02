@@ -7,7 +7,7 @@ public class UserIdAutors {
     @SerializedName("date_of_create_user")
     public String dateOfCreateUser;
     @SerializedName("image")
-    public Object image;
+    public String image;
     @SerializedName("first_name")
     public String firstName;
     @SerializedName("second_name")
@@ -19,7 +19,7 @@ public class UserIdAutors {
         return dateOfCreateUser;
     }
 
-    public Object getImage() {
+    public String getImage() {
         return image;
     }
 
